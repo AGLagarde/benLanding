@@ -1,0 +1,56 @@
+// global styles 
+/* -- COMMON -- */
+@import './common/mixins.scss';
+@import './common/variables.scss';
+
+
+/* -- COMPONENTS -- */
+@import './components/navigation.scss';
+@import './components/textImg.scss';
+@import './components/concept.scss';
+
+
+
+#app {
+    margin-top: 40px;
+    @include font (16px, $greyInk, 300,  1.5);
+}
+
+.h2 {
+    @include font (50px, $greyInk, 600, 1.2em);
+    text-align: left;
+    margin: 0;
+    font-family: $avalon;
+}
+.h3 {
+    @include font (34px, $greyInk, 600, 1.3em);
+    text-align: left;
+    margin: 0;
+    font-family: $avalon;
+}
+
+p {
+    @include font (26px, $grey, 300, 1.5em);
+    margin: 0; 
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+button, 
+input {
+    &:focus {
+        outline: none;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+.button_gradient {
+    @include button_gradient();
+    width: 160px;
+    text-align: center;
+}
