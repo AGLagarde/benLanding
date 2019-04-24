@@ -1,0 +1,19 @@
+.navigation {
+    width: calc(100% - 160px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 80px;
+    ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+    }
+    li {
+        display: inline-block;
+        text-transform: uppercase;
+        @include font (16px, $greyInk, 600);
+        letter-spacing: 0.8;
+        padding-left: 25px;
+    }
+}

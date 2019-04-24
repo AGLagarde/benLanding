@@ -1,0 +1,55 @@
+.textImg {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 80px 0;
+    &__content {
+        order: 1;
+        flex: 0 0 48%;
+        .h2 {
+            margin-bottom: 25px;
+        }
+        .button_gradient {
+            margin-top: 50px;
+        }
+    }
+    &__illu {
+        order: 2;
+        height: 480px;
+        flex: 0 0 50%;
+        picture {
+            height: 100%;
+            width: 100%; 
+            img {
+                height: 100%;
+                width: 100%; 
+                object-fit: cover;
+            }
+        }
+    }
+
+    // SPECIFIC CLASSIC
+    &.intro {
+        //background-color: #DDD;
+    }
+
+    // SPECIFIC CURVED 
+    &.is-curved {
+        height: 780px;
+        margin-top: -60px;
+        background-image: url('../assets/curve.svg');
+        background-position: left top;
+        background-size: cover; 
+        .textImg__content {
+            order: 2; 
+            text-align: right;
+        }
+        .h2, p {
+            text-align: right;
+        }
+        .textImg__illu {
+            order: 1; 
+        }
+    }
+}
+
