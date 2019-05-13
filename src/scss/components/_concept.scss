@@ -1,36 +1,103 @@
 .concept {
-    display: flex; 
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 70px 80px 0;
-    .h2 {
-        flex: 0 0 100%;
-        text-align: center;
-        margin-bottom: 115px;
-    }
-    &__content {
-        flex: 0 0 48%;
+    width: 85%;
+    margin: 0 auto;
+    padding: 70px 0 0;
 
-        &-item {
-            padding-bottom: 60px;
-            @include font (26px, $grey, 300, 1.5);
-            font-family: $roboto;
+    &__content {
+        flex-basis: 55%;
+        order: 2;
+
+        &-wrap {
+            @include flexBlock($justify: flex-end, $flexwrap: wrap);
+            .h2 {
+                flex: 0 0 100%;
+                margin-bottom: 40px;
+                text-align: right;
+            }
+            p {
+                text-align: right;
+            }
         }
     }
 
     &__illu {
-        height: 580px;
-        flex: 0 0 50%;
+        position: relative;
+        flex: 0 0 35%;
+        height: 700px;
+        margin-left: 60px;
+        order:1;
         picture {
             height: 100%;
             width: 100%; 
-            img {
+            .homepage {
+                position: relative;
                 height: 100%;
-                width: 100%; 
-                object-fit: cover;
+                width: auto; 
+                object-fit: contain;
+            }
+            .mission {
+                position: absolute;
+                top: 23%; 
+                right: 8%;
+                z-index: 3; 
             }
         }
     }
 }
 
+
+@media screen and (max-width: $tablet) {
+    .concept {
+        width: 100%;
+        @include flexBlock($flexwrap: wrap);
+    
+        &__content {
+            flex-basis: 100%;
+            order: 1;
+    
+            &-wrap {
+                @include flexBlock($justify: flex-end, $flexwrap: wrap);
+                .h2 {
+                    flex: 0 0 100%;
+                    margin-bottom: 40px;
+                    text-align: center;
+                }
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    
+        &__illu {
+            flex-basis: 100%;
+            height: auto;
+            margin: 50px 0;
+            order:1;
+            picture {
+                height: 100%;
+                width: 100%; 
+                .homepage {
+                    position: relative;
+                    height: auto;
+                    width: 85%; 
+                    display: block;
+                    margin: 0 auto;
+                    object-fit: contain;
+                }
+                .mission {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $tablet) and (min-width: $mobile) {
+    .concept {
+        &__illu {
+            flex-basis: 70%;
+            margin: 70px auto;
+        }
+    }
+}

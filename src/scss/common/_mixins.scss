@@ -22,3 +22,10 @@
     @include font (18px, $white, 500, 1);
     background-image: linear-gradient(to right, $pink , $redish);
 }
+
+@mixin flexBlock($justify: space-between, $vertical: center, $flexwrap: no-wrap) {
+    display: flex; 
+    @if $justify { justify-content: $justify; }
+    @if $vertical { align-items: $vertical; }
+    @if $flexwrap { flex-wrap: $flexwrap; }
+}

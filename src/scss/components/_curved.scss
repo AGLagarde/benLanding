@@ -1,0 +1,88 @@
+.is-curved {
+    position: relative;
+    z-index: -1;
+    // border: 1px solid red;
+    width: 100%;
+    
+    &__block {
+        position: absolute;
+        z-index: 3;
+        top: 24%; 
+        left: calc(15% / 2);
+        // border: 1px solid blue;
+        width: 85%; 
+        margin: 0 auto;
+        @include flexBlock;
+    }
+    .textImg__content {
+        // border: 1px solid green;
+        @include flexBlock($justify: flex-end);
+        order: 2; 
+        text-align: right;
+        margin-top: 80px;
+    }
+    .textImg__illu {
+        // border: 1px solid purple;
+        order: 1; 
+        flex-basis: 35%; 
+        margin-left: 60px;
+        height: 700px;
+        .homepage {
+            height: 100%; 
+            width: auto;
+        }
+        .mission {
+            position: absolute;
+            top: 20%;
+            left: 3%;
+            box-shadow: 2px 1px 5px #ccc;
+        }
+    }
+}
+
+.is-curved.concept {
+    height: 1028px;
+    margin-top: -125px;
+    background-image: url('../assets/background/curve1.svg');
+    background-position: left top;
+    background-size: cover; 
+}
+
+@media screen and (max-width: $tablet) {
+    .is-curved {
+        &.concept {
+            height: auto;
+            margin: 0;
+        }
+        &__block {
+            position: relative;
+            width: 100%;
+            left: 0;
+            @include flexBlock($flexwrap: wrap);
+        }
+        .textImg__content {
+        }
+        .textImg__illu {
+            flex-basis: 100%;
+            margin: 50px 0 0;
+            height: auto;
+            .homepage {
+                display:block;
+                width: 85%;
+                height: auto;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media (max-width: $tablet) and (min-width: $mobile) {
+    .is-curved {
+        width: 90%;
+        margin: 70px auto 0;
+        &__block {
+            width: 90%; 
+            margin: 0 auto;
+        }
+    }
+}
