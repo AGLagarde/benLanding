@@ -1,8 +1,13 @@
 .textImg {
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
-    padding: 70px 80px 0;
+    // bloc intro 
+    &.intro {
+        width: 85%; 
+        margin: 0 auto;
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        padding: 70px 0 0;
+    }
     &__content {
         order: 1;
         flex: 0 0 48%;
@@ -14,41 +19,19 @@
         }
     }
     &__illu {
+        position: relative;
         order: 2;
         height: 480px;
-        flex: 0 0 50%;
+        flex: 0 0 40%;
         picture {
             height: 100%;
             width: 100%; 
-            img {
-                height: 100%;
+            .homepage {
+                // position: relative;
+                height: 580px;
                 width: 100%; 
-                object-fit: cover;
+                object-fit: contain;
             }
-        }
-    }
-
-    // SPECIFIC CLASSIC
-    &.intro {
-        //background-color: #DDD;
-    }
-
-    // SPECIFIC CURVED 
-    &.is-curved {
-        height: 780px;
-        margin-top: -60px;
-        background-image: url('../assets/curve.svg');
-        background-position: left top;
-        background-size: cover; 
-        .textImg__content {
-            order: 2; 
-            text-align: right;
-        }
-        .h2, p {
-            text-align: right;
-        }
-        .textImg__illu {
-            order: 1; 
         }
     }
 }

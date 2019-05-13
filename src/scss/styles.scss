@@ -6,14 +6,22 @@
 
 /* -- COMPONENTS -- */
 @import './components/navigation.scss';
+@import './components/intro.scss';
 @import './components/textImg.scss';
 @import './components/concept.scss';
+@import './components/functions.scss';
+@import './components/more.scss';
+@import './components/curved.scss';
+@import './components/catchphrase.scss';
 
 
 
 #app {
     margin-top: 40px;
     @include font (16px, $greyInk, 300,  1.5);
+    @media screen and (max-width: $tablet) {
+        margin-top: 0;
+    }
 }
 
 .h2 {
@@ -21,17 +29,27 @@
     text-align: left;
     margin: 0;
     font-family: $avalon;
+    @media screen and (max-width: $tablet) {
+        text-align: center;
+    }
 }
+
 .h3 {
     @include font (34px, $greyInk, 600, 1.3em);
     text-align: left;
     margin: 0;
     font-family: $avalon;
+    @media screen and (max-width: $tablet) {
+        text-align: center;
+    }
 }
 
 p {
     @include font (26px, $grey, 300, 1.5em);
     margin: 0; 
+    @media screen and (max-width: $tablet) {
+        text-align: center;
+    }
 }
 
 a {

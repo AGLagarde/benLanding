@@ -1,0 +1,76 @@
+.intro {
+    width: 85%; 
+    margin: 0 auto;
+    @include flexBlock;
+    padding: 70px 0 0;
+    color: red;
+
+    &__content {
+        order: 1;
+        flex-basis: 48%;
+        .h2 {
+            margin-bottom: 25px;
+        }
+        .button_gradient {
+            margin-top: 50px;
+        }
+    }
+
+    &__illu {
+        position: relative;
+        order: 2;
+        flex-basis: 40%;
+        height: 480px;
+        
+        picture {
+            height: 100%;
+            width: 100%; 
+            .homepage {
+                height: 580px;
+                width: 100%; 
+                object-fit: contain;
+            }
+            .mission {
+                position: absolute;
+                top: 23%; 
+                right: 8%;
+                z-index: 3; 
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .intro {
+        width: 100%; 
+        flex-wrap: wrap;
+        padding: 40px 0 0;
+
+        &__content {
+            text-align: center;
+            flex-basis: 100%;
+        }
+
+        &__illu {
+            flex-basis: 100%;
+            margin-top: 60px;
+            height: auto;
+            picture {
+                .homepage {
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $tablet) and (min-width: $mobile) {
+    .intro {
+        width: 90%;
+        margin: 0 5%;
+        &__illu {
+            flex-basis: 70%; 
+            margin: 60px auto 0;
+        }
+    }
+}
