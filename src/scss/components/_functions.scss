@@ -1,6 +1,8 @@
 .functions {
     width: 85%;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
     @include flexBlock($flexwrap: wrap);
     padding: 70px 0 0;
 
@@ -93,6 +95,7 @@
             flex-basis: 100%;
             margin-right: 0;
             height: auto;
+            transform: scale(0.9);
 
             .alert, 
             .absence {

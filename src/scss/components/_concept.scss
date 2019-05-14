@@ -1,11 +1,14 @@
 .concept {
     width: 85%;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
     padding: 70px 0 0;
 
     &__content {
         flex-basis: 55%;
         order: 2;
+        margin-top: -80px;
 
         &-wrap {
             @include flexBlock($justify: flex-end, $flexwrap: wrap);
@@ -23,8 +26,8 @@
     &__illu {
         position: relative;
         flex: 0 0 35%;
-        height: 700px;
-        margin-left: 60px;
+        height: 780px;
+        margin-left: 80px;
         order:1;
         picture {
             height: 100%;

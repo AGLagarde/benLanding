@@ -2,9 +2,12 @@
     width: 85%;
     margin: 0 auto;
 }
+.logo {
+    transform: scale(2);
+}
 .menuToggle {
     @include flexBlock;
-    padding: 60px 0;
+    padding: 25px 0;
 
     label, input {
         display: none;
@@ -16,9 +19,16 @@
     li {
         display: inline-block;
         text-transform: uppercase;
-        @include font (24px, $greyInk, 600);
+        @include font (30px, $greyInk, 600);
         letter-spacing: 0.8;
         padding-left: 25px;
+
+        a {
+            color: inherit;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
     }
 }
     
