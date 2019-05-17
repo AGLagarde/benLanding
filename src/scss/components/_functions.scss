@@ -79,6 +79,7 @@
                 &--icon {
                     flex-basis: 100%;
                     text-align: center;
+                    transform: scale(0.9);
                 }
                 &--text {
                     margin-top: 20px;
@@ -123,7 +124,7 @@
                 margin-bottom: 60px;
 
                 &--icon {
-                    flex-basis: 20%;
+                    flex-basis: 15%;
                 }
                 &--text {
                     flex-basis: 80%;

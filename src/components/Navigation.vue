@@ -20,6 +20,9 @@
 <script>
 export default {
   name: 'Navigation',
+  data: {
+      isMobile: false
+  },
   props: {
   }, 
   methods: {
@@ -32,10 +35,19 @@ export default {
                     });
                 });
             });
+      }, 
+      stopScroll () {
+          document.querySelector('body').classList.add('freeze');
       }
-   
   }
 }
 </script>
+
+<style lang="scss">
+    body.freeze {
+        overflow: hidden;
+    }
+</style>
+
 
 
