@@ -4,7 +4,8 @@
             <h2 class="h2">Ben, le meilleur membre de ta colococation</h2>
             <p>Ben te décharge de ce moment relou où toi et tes colacataires  vous devez choisir qui se coltinera le ménage des toilettes de l’appartement.</p>
             <a href="#" class="button_gradient">
-                Play Store
+                <img src="../assets/icons/play.png" alt="play">
+                <span>Play store</span>
             </a>
         </div>
         <div class="intro__illu">
