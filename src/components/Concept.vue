@@ -3,9 +3,9 @@
         <div id="principle" class="is-curved__block">
             <div class="concept__content">
                 <div class="concept__content-wrap">
-                    <span><img src="../assets/icons/calendar.svg" alt=""></span>
+                    <span><img src="../assets/icons/calendar.svg" alt="calendar"></span>
                     <h2 class="h2">Ben est équitable <br>et organisé </h2>
-                    <p>Ben t’aidera à organiser et donner les tâches ménagére à tout les membres de la colocation de façon parfaitement équitable </p>
+                    <p>Ben t’aidera à organiser et donner les tâches ménagères à tous les membres de la colocation de façon parfaitement équitable </p>
                 </div>
             </div>
             <div class="concept__illu">
@@ -28,3 +28,26 @@ export default {
 </script>
 
 
+
+<style lang="scss">
+@import '../scss/styles.scss';
+
+.is-curved.concept {
+    height: 1095px;
+    margin-top: -125px;
+    background-image: url('../assets/background/curve1.svg');
+    background-position: left top;
+    background-size: cover; 
+}
+
+@media screen and (max-width: $tablet) {
+    .is-curved {
+        &.concept {
+            height: auto;
+            margin: 0;
+        }
+    }
+}
+
+
+</style>

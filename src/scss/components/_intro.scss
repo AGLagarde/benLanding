@@ -3,7 +3,7 @@
     margin: 0 auto;
     @include flexBlock;
     padding: 70px 0 0;
-    color: red;
+    z-index: 5;
 
     &__content {
         order: 1;
@@ -12,6 +12,8 @@
             margin-bottom: 25px;
         }
         .button_gradient {
+            position: relative;
+            z-index: 10;
             margin-top: 50px;
         }
     }
@@ -47,13 +49,15 @@
         padding: 40px 0 0;
 
         &__content {
+            order: 2;
             text-align: center;
             flex-basis: 100%;
         }
 
         &__illu {
+            order: 1;
             flex-basis: 100%;
-            margin-top: 60px;
+            margin: 30px auto 50px;
             height: auto;
             picture {
                 .homepage {
@@ -70,7 +74,8 @@
         margin: 0 5%;
         &__illu {
             flex-basis: 70%; 
-            margin: 60px auto 0;
+            margin: 30px auto 50px;
+
         }
     }
 }

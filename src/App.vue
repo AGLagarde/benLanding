@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Navigation/>
+    <Anchor/>
     <Intro/>
     <Concept/>
     <Functions/>
@@ -11,6 +12,7 @@
 
 <script>
 import Navigation from './components/Navigation.vue'
+import Anchor from './components/Anchor.vue'
 import Intro from './components/Intro.vue'
 import Functions from './components/Functions.vue'
 import Concept from './components/Concept.vue'
@@ -21,6 +23,7 @@ export default {
   name: 'app',
   components: {
     Navigation,
+    Anchor,
     Intro, 
     Concept,
     Functions, 

@@ -2,9 +2,13 @@
     width: 85%;
     margin: 0 auto;
 }
+.logo {
+    transform: scale(2);
+    margin: 20px 30px 0 0;
+}
 .menuToggle {
     @include flexBlock;
-    padding: 60px 0;
+    padding: 25px 0;
 
     label, input {
         display: none;
@@ -16,9 +20,16 @@
     li {
         display: inline-block;
         text-transform: uppercase;
-        @include font (24px, $greyInk, 600);
+        @include font (30px, $greyInk, 600);
         letter-spacing: 0.8;
         padding-left: 25px;
+
+        a {
+            color: inherit;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
     }
 }
     
@@ -32,20 +43,17 @@
         width: 85%;
         margin: 0 auto;
     }
-
     .burger {
         order: 2;
         width: 40px;
-        z-index: 5;
+        z-index: 25;
         display: inline-block;
         border: 0;
         background: none;
         outline: 0;
         padding: 0;
         cursor: pointer;
-    
         border-bottom: 4px solid currentColor;
-    
         transition: border-bottom 1s ease-in-out;
         -webkit-transition: border-bottom 1s ease-in-out; 
     
@@ -75,11 +83,9 @@
             -webkit-transition: -webkit-transform 0.5s ease-in-out;
         }
     }
-    
     .burger-check {
       display: none;
     }
-    
     .burger-check:checked ~ .burger {
       border-bottom: 4px solid transparent;
       transition: border-bottom 0.8s ease-in-out;
@@ -114,12 +120,13 @@
         align-items: center;
         flex-direction: column;
         margin: 0;
-        z-index: 1;
+        z-index: 20;
         transform-origin: 0% 0%;
         transform: translate(0, 0);
         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
         li {
             padding: 0 0 35px;
+            font-size: 24px;
         }
     }
     
