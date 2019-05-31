@@ -1,103 +1,85 @@
+/*
+** DESKTOP
+ */
+
 .functions {
     width: 85%;
     margin: 0 auto;
     position: relative;
     z-index: 1;
     @include flexBlock($flexwrap: wrap);
-    padding: 70px 0 0;
-
-    .h2 {
-        flex: 0 0 100%;
-        text-align: center;
-    }
+    padding: 100px 0 0;
 
     &__content {
-        flex-basis: 50%;
-        order: 1;
-
+        width: 50%;
+        order: 2;
         &-item {
-            @include flexBlock;
+            @include flexBlock($vertical: flex-start);
             margin-bottom: 60px;
-
             &--icon {
-                flex-basis: 15%;
+                width: 15%;
             }
             &--text {
-                flex-basis: 85%;
+                width: 85%;
             }
         }
     }
 
     &__illu {
         position: relative;
-        flex-basis: 35%;
-        margin-right: 80px;
-        height: 580px;
-        order:2;
+        width: 45%;
+        order:1;
         picture {
             display: block;
-            text-align: right;
             height: 100%;
             width: 100%; 
         }
         .homepage {
             position: relative;
-            height: 100%;
-            width: auto; 
+            height: auto;
+            width: 100%;
             object-fit: contain;
-        }
-        .alert {
-            position: absolute;
-            top: 23%; 
-            right: 8%;
-            z-index: 3; 
-        }
-        .absence {
-            position: absolute;
-            top: 53%; 
-            right: 8%;
-            z-index: 3; 
         }
     }
 }
 
+/*
+** MOBILE
+ */
+
 @media screen and (max-width: $tablet) {
     .functions {
         width: 100%;
+        padding: 0;
 
         &__content {
-            flex-basis: 100%;
-
+           width: 100%;
             ul {
-                padding-inline-start: 0;
-                margin-top: 50px;
+                margin-top: 0;
             }
-
             &-item {
                 flex-wrap: wrap;
-
+                width: 90%;
+                margin: 30px auto;
                 &--icon {
-                    flex-basis: 100%;
+                    width: 100%;
                     text-align: center;
                     transform: scale(0.9);
                 }
                 &--text {
-                    margin-top: 20px;
-                    flex-basis: 100%;
+                    width: 100%;
                 }
             }
-
             .h3, p {
                 text-align: center;
             }
         }
 
         &__illu {
-            flex-basis: 100%;
+            width: 100%;
             margin-right: 0;
             height: auto;
             transform: scale(0.9);
-
             .alert, 
             .absence {
                 width: 98%; 
@@ -107,28 +89,31 @@
     }
 }
 
+
+/*
+** TABLET
+ */
+
 @media (max-width: $tablet) and (min-width: $mobile) {
     .functions {
         width: 90%;
-        margin: 0 auto;
+        margin: 50px auto;
 
         &__content {
-            flex-basis: 100%;
+            width: 100%;
             order: 1;
 
             &-item {
                 width: 90%;
-                margin: 0 auto; 
-
-                @include flexBlock;
+                margin: 0 auto;
+                @include flexBlock($vertical: flex-start);
                 margin-bottom: 60px;
 
                 &--icon {
-                    flex-basis: 15%;
+                    width: 15%;
                 }
                 &--text {
-                    flex-basis: 80%;
-                    
+                    width: 80%;
                 }
             }
             .h3, p {
@@ -137,13 +122,10 @@
         }
 
         &__illu {
-            height: auto; 
-            picture {
-                
-            }
             .homepage {
-                width: 55%; 
-                height: auto;
+                display: block;
+                width: 75%;
+                margin: 0 auto;
             }
         }
     }

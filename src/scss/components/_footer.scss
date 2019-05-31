@@ -1,0 +1,55 @@
+/*
+** DESKTOP
+ */
+.footer {
+    ul {
+        width: 85%;
+        margin: 90px auto 60px;
+        @include flexBlock($justify: center);
+    }
+
+    &_link {
+        padding: 0 40px;
+        a {
+            @include font (20px, $greyInk, 300, 1.5em);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}
+
+
+/*
+** MOBILE
+ */
+
+@media screen and (max-width: $tablet) {
+    .footer {
+        ul {
+            width: 90%;
+            flex-wrap: wrap;
+        }
+        &_link {
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
+    }
+}
+
+
+/*
+** TABLET
+ */
+
+@media (max-width: $tablet) and (min-width: $mobile) {
+    .footer {
+        ul {
+            width: 85%;
+            @include flexBlock($justify: space-between, $flexwrap: nowrap);
+        }
+        &_link {
+            width: auto;
+        }
+    }
+}

@@ -1,37 +1,132 @@
-.is-curved {
+/*
+** DESKTOP
+ */
+.curved {
     position: relative;
     z-index: -1;
     width: 100%;
+    height: 830px;
+    margin-top: 230px;
+    background-image: url('../assets/background/curve2.svg');
+    background-position: left bottom;
+    background-size: cover;
     
     &__block {
         position: absolute;
         z-index: 3;
-        top: 24%; 
+        top: -15%;
         left: calc(15% / 2);
         width: 85%; 
         margin: 0 auto;
-        @include flexBlock;
     }
+
+    .h2 {
+        width: 56%;
+        text-align: center;
+        margin: 0 auto 80px;
+    }
+
+     &__illu {
+         picture {
+             @include flexBlock;
+             justify-content: center;
+             height: 680px;
+         }
+         .homepage,
+         .list,
+         .notif {
+             width: auto;
+             height: 100%;
+             object-fit: contain;
+             padding-left: 28px;
+         }
+         .homepage {
+             padding-left: 0;
+         }
+     }
 }
 
 
+/*
+** MOBILE
+ */
+
 @media screen and (max-width: $tablet) {
-    .is-curved {
+    .curved {
+        height: auto;
+        margin-top: 50px;
+
         &__block {
             position: relative;
-            width: 100%;
+            top: 0;
             left: 0;
-            @include flexBlock($flexwrap: wrap);
+            width: 100vw;
+        }
+
+        .h2 {
+            width: 90vw;
+            line-height: 40px;
+            margin-bottom: 40px;
+        }
+
+        &__illu {
+            picture {
+                height: auto;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+            .homepage {
+                width: 70vw;
+                margin-left: 3vw;
+            }
+            .list {
+                width: 70vw;
+                margin-top: -15vw;
+                margin-left: 12vw;
+            }
+            .notif {
+                width: 70vw;
+                margin-top: -15vw;
+            }
         }
     }
 }
 
+
+/*
+** TABLET
+ */
+
 @media (max-width: $tablet) and (min-width: $mobile) {
-    .is-curved {
+    .curved {
         margin: 70px auto 0;
         &__block {
             width: 90%; 
             margin: 0 auto;
+        }
+
+        .h2 {
+            width: 63%;
+            margin-bottom: 80px;
+        }
+
+        &__illu {
+            .homepage,
+            .list,
+            .notif {
+                width: 37%;
+            }
+            .homepage {
+                margin-left: 5%;
+            }
+            .list {
+                margin-top: -45%;
+                margin-left: 27%;
+            }
+            .notif {
+                margin-top: -45%;
+                margin-left: 56%
+            }
         }
     }
 }

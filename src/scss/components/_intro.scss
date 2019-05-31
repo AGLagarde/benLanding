@@ -1,3 +1,6 @@
+/*
+** DESKTOP
+ */
 .intro {
     width: 85%; 
     margin: 0 auto;
@@ -7,63 +10,59 @@
 
     &__content {
         order: 1;
-        flex-basis: 48%;
+        width: 48%;
         .h2 {
             margin-bottom: 25px;
         }
-        .button_gradient {
-            position: relative;
-            z-index: 10;
-            margin-top: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
         img {
-            margin-right: 10px;
+            margin-right: 5px;
         }
     }
 
     &__illu {
         position: relative;
         order: 2;
-        flex-basis: 40%;
-        height: 480px;
-        
+        width: 48%;
+        height: auto;
         picture {
+            display: block;
             height: 100%;
-            width: 100%; 
-            .homepage {
-                height: 580px;
-                width: 100%; 
-                object-fit: contain;
-            }
-            .mission {
-                position: absolute;
-                top: 23%; 
-                right: 8%;
-                z-index: 3; 
-            }
+            width: 100%;
+        }
+        .homepage {
+            height: auto;
+            width: 100%;
+            object-fit: contain;
         }
     }
 }
 
+
+/*
+** MOBILE
+ */
+
 @media screen and (max-width: $tablet) {
     .intro {
-        width: 100%; 
+        width: 90%;
         flex-wrap: wrap;
-        padding: 40px 0 0;
+        padding: 0;
 
         &__content {
             order: 2;
             text-align: center;
-            flex-basis: 100%;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .button_gradient {
+            margin: 50px auto;
         }
 
         &__illu {
             order: 1;
-            flex-basis: 100%;
-            margin: 30px auto 50px;
+            width: 90%;
+            margin: 0px auto 50px;
             height: auto;
             picture {
                 .homepage {
@@ -74,14 +73,18 @@
     }
 }
 
+
+/*
+** TABLET
+ */
+
 @media (max-width: $tablet) and (min-width: $mobile) {
     .intro {
         width: 90%;
         margin: 0 5%;
         &__illu {
-            flex-basis: 70%; 
+            width: 70%;
             margin: 30px auto 50px;
-
         }
     }
 }
