@@ -1,163 +1,45 @@
-.navigation_container {
+/*
+** DESKTOP
+ */
+
+.navigation{
     width: 85%;
     margin: 120px auto 0;
-}
-.logo {
-    transform: scale(2);
-    margin: 20px 30px 0 0;
-}
-.menuToggle {
-    @include flexBlock;
-    padding: 25px 0;
-
-    label, input {
-        display: none;
-    }
-}  
-.navigation {
-    list-style-type: none;
-    @include flexBlock(flex-end, flex-start);
-    li {
+    .logo {
         display: inline-block;
-        text-transform: uppercase;
-        @include font (30px, $greyInk, 600);
-        letter-spacing: 0.8;
-        padding-left: 25px;
-
-        a {
-            color: inherit;
-            &:hover {
-                opacity: 0.8;
-            }
+        width: auto;
+        max-height: 75px;
+        img {
+            display: inline-block;
+            transform: scale(2);
+            transform-origin: 0 0;
         }
     }
 }
-    
+
+
+/*
+** MOBILE
+ */
 
 @media screen and (max-width: $tablet) {
-    .logo {
-        margin: 20px 30px;
-    }
-    .menuToggle label, input {
-        display: block;
-    }
-    .navigation_container {
-        position: relative;
-        width: 85%;
-        margin: 0 auto;
-    }
-    .burger {
-        order: 2;
-        width: 40px;
-        z-index: 25;
-        display: inline-block;
-        border: 0;
-        background: none;
-        outline: 0;
-        padding: 0;
-        cursor: pointer;
-        border-bottom: 4px solid currentColor;
-        transition: border-bottom 1s ease-in-out;
-        -webkit-transition: border-bottom 1s ease-in-out; 
-        // Fix for extra space in Firefox
-        &::-moz-focus-inner {
-            border: 0;
-            padding: 0;
-        }	 
-    
-        &:before {
-            content: "";
-            display: block;
-            border-bottom: 4px solid currentColor;
-            width: 100%;
-            margin-bottom: 5px;
-            transition: transform 0.5s ease-in-out;    
-            -webkit-transition: -webkit-transform 0.5s ease-in-out;        
-        }
-    
-        &:after {
-            content: "";
-            display: block;
-            border-bottom: 4px solid currentColor;
-            width: 100%;
-            margin-bottom: 5px;
-            transition: transform 0.5s ease-in-out;
-            -webkit-transition: -webkit-transform 0.5s ease-in-out;
-        }
-    }
-    .burger-check {
-        display: none;
-        &.is-active ~ .burger {
-            border-bottom: 4px solid transparent;
-            transition: border-bottom 0.8s ease-in-out;
-            -webkit-transition: border-bottom 0.8s ease-in-out;
-            
-            &:before {
-                transform: rotate(-405deg) translateY(1px) translateX(-3px);
-                -webkit-transform: rotate(-405deg) translateY(1px) translateX(-3px);      
-                transition: transform 0.5s ease-in-out;
-                -webkit-transition: -webkit-transform 0.5s ease-in-out;
-            }
-        
-            &:after {
-                transform: rotate(405deg) translateY(-4px) translateX(-5px); 
-                -webkit-transform: rotate(405deg) translateY(-4px) translateX(-5px);       
-                transition: transform 0.5s ease-in-out;
-                -webkit-transition: -webkit-transform 0.5s ease-in-out;
-            }
-        }
-        &.is-active ~ .navigation {
-            right: 0; 
-            box-shadow: 0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
-        }
-    }
-    
     .navigation {
-        background-color: $white;
-        position: fixed;
-        right: -80vw; 
-        top: 0;
-        margin: 0;
-        width: 60vw;
-        height: 100vh;
-        padding: 0 30px;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin: 0;
-        z-index: 20;
-        transform-origin: 0% 0%;
-        transform: translate(0, 0);
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-
-        li {
-            padding: 0 0 35px;
-            font-size: 24px;
+        margin: 30px;
+        .logo {
+            img {
+                transform: scale(1);
+            }
         }
     }
-   
+}
 
-    // .menu {
-    //     position: fixed;
-    //     right: 0; 
-    //     top: 0;
-    //     margin: 0;
-    //     width: 60vw;
-    //     height: 100vh;
-    //     padding: 0 30px;
-    //     flex-wrap: wrap;
-    //     justify-content: center;
-    //     align-items: center;
-    //     flex-direction: column;
-    //     padding-top: 125px;
-    //     background: #ededed;
-    //     list-style-type: none;
-    //     -webkit-font-smoothing: antialiased;
-    //     /* to stop flickering of text in safari */
-    //     transform-origin: 0% 0%;
-    //     transform: translate(200%, 0);
-    //     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-        
-    // }
+
+/*
+** TABLET
+ */
+
+@media (max-width: $tablet) and (min-width: $mobile) {
+    .navigation {
+        margin: 40px 60px;
+    }
 }

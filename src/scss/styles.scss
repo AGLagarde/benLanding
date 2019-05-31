@@ -7,13 +7,10 @@
 /* -- COMPONENTS -- */
 @import './components/navigation.scss';
 @import './components/intro.scss';
-@import './components/textImg.scss';
-@import './components/concept.scss';
 @import './components/functions.scss';
-@import './components/more.scss';
 @import './components/curved.scss';
 @import './components/catchphrase.scss';
-
+@import './components/footer.scss';
 
 
 #app {
@@ -26,36 +23,38 @@
 
 .h2 {
     @include font (50px, $greyInk, 600, 1.2em);
+    @include font-avalon;
     text-align: left;
     margin: 0;
-    font-family: $avalon;
     @media screen and (max-width: $tablet) {
-        font-size: 40px;
+        font-size: 30px;
         text-align: center;
     }
 }
 
 .h3 {
-    @include font (34px, $greyInk, 600, 1.3em);
+    @include font (26px, $greyInk, 600, 1.3em);
+    @include font-avalon;
     text-align: left;
-    margin: 0;
-    font-family: $avalon;
+    margin: 0 0 15px;
     @media screen and (max-width: $tablet) {
         text-align: center;
-        font-size: 30px;
+        font-size: 26px;
     }
 }
 
 p {
-    @include font (26px, $grey, 300, 1.5em);
+    @include font (20px, $grey, 300, 1.5em);
+    @include font-roboto;
     margin: 0; 
     @media screen and (max-width: $tablet) {
-        font-size: 24px;
+        font-size: 18px;
         text-align: center;
     }
 }
 
 a {
+    @include font-roboto;
     text-decoration: none;
     display: inline-block;
 }
@@ -69,6 +68,9 @@ input {
 
 ul {
     list-style-type: none;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+
 }
 .button_gradient {
     @include button_gradient();

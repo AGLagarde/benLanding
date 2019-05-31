@@ -1,45 +1,33 @@
 <template>
   <div id="app">
     <Navigation/>
-    <Anchor/>
     <Intro/>
-    <Concept/>
     <Functions/>
-    <Content class="bis"/>
+    <Curved />
     <CatchPhrase/>
+    <Footer/>
   </div>
 </template>
 
 <script>
-import Navigation from './components/Navigation.vue'
-import Anchor from './components/Anchor.vue'
-import Intro from './components/Intro.vue'
-import Functions from './components/Functions.vue'
-import Concept from './components/Concept.vue'
-import Content from './components/Content.vue'
-import CatchPhrase from './components/CatchPhrase.vue'
+    import Navigation from './components/Navigation.vue'
+    import Intro from './components/Intro.vue'
+    import Functions from './components/Functions.vue'
+    import Concept from './components/Concept.vue'
+    import Curved from './components/Curved.vue'
+    import CatchPhrase from './components/CatchPhrase.vue'
+    import Footer from './components/Footer.vue'
 
-export default {
-  name: 'app',
-  components: {
-    Navigation,
-    Anchor,
-    Intro, 
-    Concept,
-    Functions, 
-    Content,
-    CatchPhrase
-  }
-}
+    export default {
+        components: {
+            Navigation,
+            Intro,
+            Concept,
+            Functions,
+            Curved,
+            CatchPhrase,
+            Footer
+        }
+    }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

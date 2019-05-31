@@ -6,21 +6,38 @@
     text-align: left;
 }
 
-@font-face {
+@mixin font-avalon {
     font-family: 'Avalon Bold', Helvetica, Arial, sans-serif;
     src: url('../assets/avalon_bold.ttf')  format('truetype')
 }
 
-@font-face {
+@mixin font-roboto {
     font-family: 'Roboto Light', Helvetica, Arial, sans-serif;
     src: url('../assets/roboto-light.ttf')  format('truetype')
 }
 
 @mixin button_gradient () {
-    border-radius: 10px;
-    padding: 20px 0;
+    @include flexBlock();
     @include font (18px, $white, 500, 1);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 50px;
     background-image: linear-gradient(to right, $pink , $redish);
+    p, span {
+        color: inherit;
+        text-align: center;
+    }
+    p {
+        @include flexBlock($justify: center, $flexwrap: wrap);
+        span {
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 20px;
+            &:last-child {
+                font-weight: 600;
+            }
+        }
+    }
 }
 
 @mixin flexBlock($justify: space-between, $vertical: center, $flexwrap: no-wrap) {
