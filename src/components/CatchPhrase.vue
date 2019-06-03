@@ -1,7 +1,7 @@
 <template>
   <div class="catch">
     <picture class="catch__illu">
-      <img src="../assets/img/ben-image.png" alt="">
+      <img src="../assets/img/finale.png" alt="roommates">
     </picture>
     <h2 class="h2">Avec Ben, retrouve l'harmonie <br> de ta colocation</h2>
     <a :href=" `//${url.playstore}`" class="button_gradient">
