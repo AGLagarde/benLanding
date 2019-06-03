@@ -5,9 +5,9 @@
                 à vous organiser </h2>
             <div class="curved__illu">
                 <picture>
-                    <img class="homepage" src="../assets/img/home_01.jpg" alt="homepage">
-                    <img class="list" src="../assets/img/list_02.jpg" alt="list page">
-                    <img class="notif" src="../assets/img/notif_03.jpg" alt="notification page">
+                    <img class="homepage" src="../assets/img/home_01.png" alt="homepage">
+                    <img class="list" src="../assets/img/list_02.png" alt="list page">
+                    <img class="notif" src="../assets/img/notif_03.png" alt="notification page">
                 </picture>
             </div>
         </div>

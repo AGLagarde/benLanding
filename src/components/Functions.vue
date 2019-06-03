@@ -24,7 +24,7 @@
         </div>
         <div class="functions__illu">
             <picture>
-                <img class="homepage" src="../assets/img/ben_home.jpg" alt="ben assistant coloc">
+                <img class="homepage" src="../assets/img/ben_home.png" alt="ben assistant coloc">
             </picture>
         </div>
     </div>

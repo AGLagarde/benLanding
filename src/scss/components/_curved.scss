@@ -97,7 +97,7 @@
 ** TABLET
  */
 
-@media (max-width: $tablet) and (min-width: $mobile) {
+@media screen and (max-width: $tablet) and (min-width: $mobile) {
     .curved {
         margin: 70px auto 0;
         &__block {
@@ -111,6 +111,7 @@
         }
 
         &__illu {
+            width: 90%;
             .homepage,
             .list,
             .notif {
