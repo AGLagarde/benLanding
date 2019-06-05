@@ -23,7 +23,7 @@
     .h2 {
         width: 56%;
         text-align: center;
-        margin: 0 auto 80px;
+        margin: 50px auto 80px;
     }
 
      &__illu {
@@ -95,7 +95,7 @@
 
 /*
 ** TABLET
- */
+*/
 
 @media screen and (max-width: $tablet) and (min-width: $mobile) {
     .curved {
@@ -127,6 +127,16 @@
             .notif {
                 margin-top: -45%;
                 margin-left: 56%
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $smalldesk) and (min-width: $tablet) {
+    .curved {
+        &__illu {
+            picture {
+                height: 650px;
             }
         }
     }
