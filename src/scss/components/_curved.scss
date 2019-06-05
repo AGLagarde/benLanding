@@ -50,7 +50,6 @@
 /*
 ** MOBILE
  */
-
 @media screen and (max-width: $tablet) {
     .curved {
         height: auto;
@@ -78,18 +77,19 @@
             .homepage {
                 height: auto;
                 width: 70vw;
-                //margin-left: 3vw;
+                margin-left: 5vw;
             }
             .list {
                 height: auto;
                 width: 70vw;
-                margin-top: -15vw;
+                margin-top: -17vw;
                 margin-left: 12vw;
             }
             .notif {
                 height: auto;
                 width: 70vw;
                 margin-top: -15vw;
+                margin-left: 5vw;
             }
         }
     }
@@ -124,15 +124,15 @@
                 width: 40%;
             }
             .homepage {
-                // margin-left: 5%;
+                margin-left: 0;
             }
             .list {
-                margin-top: -45%;
+                margin-top: -64%;
                 margin-left: 33%;
             }
             .notif {
-                margin-top: -45%;
-                margin-left: 60%
+                margin-top: -60%;
+                margin-left: 60%;
             }
         }
     }
