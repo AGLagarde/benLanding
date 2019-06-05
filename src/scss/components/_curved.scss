@@ -76,15 +76,18 @@
                 justify-content: flex-start;
             }
             .homepage {
+                height: auto;
                 width: 70vw;
-                margin-left: 3vw;
+                //margin-left: 3vw;
             }
             .list {
+                height: auto;
                 width: 70vw;
                 margin-top: -15vw;
                 margin-left: 12vw;
             }
             .notif {
+                height: auto;
                 width: 70vw;
                 margin-top: -15vw;
             }
@@ -107,37 +110,32 @@
 
         .h2 {
             width: 63%;
-            margin-bottom: 80px;
+            margin-bottom: 50px;
         }
 
         &__illu {
             width: 90%;
+            picture {
+                height: auto;
+            }
             .homepage,
             .list,
             .notif {
-                width: 37%;
+                width: 40%;
             }
             .homepage {
-                margin-left: 5%;
+                // margin-left: 5%;
             }
             .list {
                 margin-top: -45%;
-                margin-left: 27%;
+                margin-left: 33%;
             }
             .notif {
                 margin-top: -45%;
-                margin-left: 56%
+                margin-left: 60%
             }
         }
     }
 }
 
-@media screen and (max-width: $smalldesk) and (min-width: $tablet) {
-    .curved {
-        &__illu {
-            picture {
-                height: 650px;
-            }
-        }
-    }
-}
+
