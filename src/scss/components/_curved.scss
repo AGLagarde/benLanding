@@ -14,7 +14,7 @@
     &__block {
         position: absolute;
         z-index: 3;
-        top: -15%;
+        top: -25%;
         left: calc(15% / 2);
         width: 85%; 
         margin: 0 auto;
@@ -30,7 +30,7 @@
          picture {
              @include flexBlock;
              justify-content: center;
-             height: 680px;
+             height: 700px;
          }
          .homepage,
          .list,
@@ -38,7 +38,7 @@
              width: auto;
              height: 100%;
              object-fit: contain;
-             padding-left: 4%;
+             padding-left: 3%;
          }
          .homepage {
              padding-left: 0;
